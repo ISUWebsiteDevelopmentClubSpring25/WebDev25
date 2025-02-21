@@ -1,0 +1,11 @@
+Copy and enter these lines one by one when pushing your code
+
+1. Open terminal, click the drop down arrow that is to the right of the plus (+) sign, switch to git bash
+2. enter "cd WebDev25/"
+3. enter git add .
+4. enter git commit -m "Enter your commit message here"
+5. enter git push origin main
+
+PSA:
+Do not include the numbers that is just for instruction purposes.
+Reach out if you need help to either Cesar, Justin, Aaliyah, or Colton if you need help.
