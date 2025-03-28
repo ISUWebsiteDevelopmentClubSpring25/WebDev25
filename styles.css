@@ -1,11 +1,68 @@
-body {
-    background-color: #003049;
-}
-div{
-    color:white;
+* {
+    font-family: "Jersey 25", sans-serif;
+    font-style: normal;
+    list-style: none;
 }
 
-#header{
-    background-color:   #34312D;
-    font-family: "Nunito Sans", sans-serif;
+body {
+    background-color: #CD4C4C;
+}
+
+.topnav {
+    background-color: none;
+    overflow: hidden;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+
+  }
+
+.topnav a:hover {
+    background-color: #f1acac;
+    color: none;
+    transition: background 0.4s ease-in-out;
+    border-radius: 35px;
+}
+
+
+.header{
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 40px;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+}
+
+.card-header{
+    font-family: "Jersey 25", sans-serif;
+    font-weight: 400;
+    font-size: 45px;
+    text-align: center;
+}
+
+.card-background{
+    background-color: #FF6868;
+    border-radius: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: 25px 25px 25px;
+}
+
+.card-images{
+    width: 200px;
+    height: 200px;
+    padding: 30px;
+    
 }
