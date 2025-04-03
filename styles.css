@@ -8,32 +8,6 @@ body {
     background-color: #CD4C4C;
 }
 
-.topnav {
-    background-color: none;
-    overflow: hidden;
-    font-weight: 400;
-    font-style: normal;
-
-}
-
-.topnav a {
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-
-  }
-
-.topnav a:hover {
-    background-color: #f1acac;
-    color: none;
-    transition: background 0.4s ease-in-out;
-    border-radius: 35px;
-}
-
-
 .header{
     color: #FFFFFF;
     font-weight: 400;
@@ -42,6 +16,102 @@ body {
     flex-direction: column; 
     justify-content: center;
     align-items: center;
+    text-align: center;
+}
+
+.header-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.header-labels {
+    font-size: 72px;
+}
+
+.topnav {
+    background-color: none;
+    overflow: visible;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 50px;
+    text-decoration: none;
+    font-size: 27px;
+
+  }
+
+  @media (max-width: 768px) {
+    .header-top {
+        flex-direction: column; /* Stack logo and text vertically on smaller screens */
+        text-align: center;
+    }
+}
+
+.topnav a:hover {
+    background-color: #f1acac;
+    color: none;
+    transition: background 0.4s ease-in-out;
+    border-radius: 35px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 35px;
+    transition: background 0.3s ease-in-out;
+    display: block;
+}
+
+.dropdown a:hover {
+    background: #f1acac;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #f1acac;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 175px;
+    border-radius: 35px;
+    z-index: 1000;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-menu li {
+    width: 100%;
+    padding: 10px 0;
+}
+
+.dropdown-menu a {
+    color: white;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+    background: red;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
 }
 
 .card-header{
@@ -58,6 +128,7 @@ body {
     flex-wrap: wrap;
     text-align: center;
     margin: 25px 25px 25px;
+    width: 500px;
 }
 
 .card-images{

@@ -11,14 +11,43 @@
 <body>
     
     <div class="header">
-        <img src="/assets/logos/dev-bird-red-and-white.png" height="200" width="200">
-        <div class="h2">Welcome To Web Dev Club</div>
+        <div class="header-top">
+            <img src="assets/logos/dev-bird-red-and-white.png" height="200" width="200">
+            <div class="header-labels">Welcome To Web Dev Club!</div>
+        </div>
         <div class="topnav">
-            <a class="active" href="#home">Home</a>
-            <a href="news.html">News</a>
-            <a href="resources.html">Resources</a>
-            <a href="connect.html">Connect</a>
-          </div> 
+            <div class="dropdown">
+                <a href="#home">Home</a>
+            </div>
+            
+
+            <div class="dropdown">
+                <a href="news.html">News</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Upcoming Events</a></li>
+                    <li><a href="#">What Were Currently Working On</a></li>
+                    <li><a href="#">Summary of Meetings</a></li>
+                    <li><a href="#">Weekly Updates</a></li>
+                </ul>
+            </div>
+
+            <div class="dropdown">
+                <a href="resources.html">Resources</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">How To Learn</a></li>
+                    <li><a href="#">Academic Guidance</a></li>
+                </ul>
+            </div>
+
+            <div class="dropdown">
+                <a href="connect.html">Connect</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Testimonials</a></li>
+                    <li><a href="#">Meet The Members</a></li>
+                    <li><a href="#">Dr. Lewis</a></li>
+                </ul>
+            </div>
+        </div> 
     </div>
 
     <div>
@@ -35,7 +64,7 @@
         <div class="card-background">
             
 
-            <img class= "card-images" src="/assets/logos/redbird-thumbs-up.png">
+            <img class= "card-images" src="assets/logos/redbird-thumbs-up.png">
             
             <div>
                 <h2 class="card-header">About Web Dev Reds</h2>
@@ -52,7 +81,7 @@
 
     <!--- why join section -->
     <div class="card-background">
-        <img class="card-images" src="??.png">
+        <img class="card-images" src="assets/logos/web-bird-red-and-black.png">
         <p>
             
             Do you have an interest in web development or want to learn more about coding and building websites?
