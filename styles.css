@@ -164,3 +164,12 @@ body {
     text-align: center;
 }
 
+.news-body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #861d1d, #d04e4e);
+}
+
+.header-logos{
+    padding-left: 25px;
+}
