@@ -121,7 +121,17 @@ body {
     text-align: center;
 }
 
-.card-background{
+.upcoming-events{
+    background-color: #FF6868;
+    border-radius: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: 25px 25px 25px;
+    width: 250px;
+}
+
+.about-card{
     background-color: #FF6868;
     border-radius: 50px;
     display: flex;
@@ -172,4 +182,8 @@ body {
 
 .header-logos{
     padding-left: 25px;
+}
+
+.center-page {
+    display: flex;
 }
