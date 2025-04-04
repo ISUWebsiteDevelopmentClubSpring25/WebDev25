@@ -137,3 +137,30 @@ body {
     padding: 30px;
     
 }
+
+.featured-news-card {
+    background-color: white;
+    color: black;
+    margin: 0 auto;
+    width: 70%;
+    padding: 20px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.news-update-card {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    color: black;
+    width: 250px;
+    margin: 20px auto;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.news-section {
+    padding: 20px;
+    text-align: center;
+}
+
