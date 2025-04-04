@@ -136,17 +136,28 @@ body {
     border-radius: 50px;
     display: flex;
     flex-wrap: wrap;
-    text-align: center;
-    margin: 25px 25px 25px;
+    align-items: center;
+    width: 750px;
+}
+
+.about-description {
     width: 500px;
+    text-align: center;
 }
 
 .card-images{
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: auto;
     padding: 30px;
     
 }
+
+@media (max-width: 768px) {
+    .about-card {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
 
 .featured-news-card {
     background-color: white;
