@@ -198,3 +198,72 @@ body {
 .center-page {
     display: flex;
 }
+.meeting {
+    border-left: 3px solid #2ecc71;
+    padding-left: 15px;
+    margin: 20px 0;
+}
+
+.meeting-date {
+    font-weight: bold;
+    color: #7f8c8d;
+    margin: 5px 0;
+}
+
+.hidden {
+    display: none;
+}
+
+button {
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+
+button:hover {
+    background-color: #27ae60;
+}
+
+#auth-section, #post-form {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.error {
+    color: #e74c3c;
+    font-size: 0.9em;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #ecf0f1;
+    margin: 15px 0;
+}
+
+#all-meetings-container {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+}
+
+#all-meetings-container.expanded {
+    max-height: 2000px;
+}

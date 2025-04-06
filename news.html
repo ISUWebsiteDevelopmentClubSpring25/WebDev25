@@ -1,27 +1,30 @@
-<!DOCTYPE hmtl>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>News</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jersey+25&display=swap">
 </head>
-<div class="header">
-    <div class="header-top">
-        <img src="assets/logos/dev-bird-red-and-white.png" height="200" width="200">
-        <div class="header-labels"> Newspage</div>
-    </div>
+
+<body>
+    <div class="header">
+        <div class="header-top">
+            <img src="assets/logos/dev-bird-red-and-white.png" height="200" width="200">
+            <div class="header-labels">Newspage</div>
+        </div>
         <div class="topnav">
             <div class="dropdown">
                 <a href="homepage.html">Home</a>
             </div>
-            
 
             <div class="dropdown">
                 <a href="news.html">News</a>
                 <ul class="dropdown-menu">
                     <li><a href="#">Upcoming Events</a></li>
-                    <li><a href="#">What Were Currently Working On</a></li>
+                    <li><a href="#">What We're Currently Working On</a></li>
                     <li><a href="#">Summary of Meetings</a></li>
                     <li><a href="#">Weekly Updates</a></li>
                 </ul>
@@ -43,17 +46,18 @@
                     <li><a href="#">Dr. Lewis</a></li>
                 </ul>
             </div>
-        </div> 
+        </div>
     </div>
-   <!-- featured news -->
-   <section class="news-section">
-    <h2 class="section-title">Featured News</h2>
-    <div class="featured-news-card">
-        Lorem ipsum asd wasd Libero recusandae vitae, neque minus voluptatibus sed
-    </div>
-</section>
 
-    <!-- latest updates -->
+    <!-- Featured News -->
+    <section class="news-section">
+        <h2 class="section-title">Featured News</h2>
+        <div class="featured-news-card">
+            Lorem ipsum asd wasd Libero recusandae vitae, neque minus voluptatibus sed
+        </div>
+    </section>
+
+    <!-- Latest Updates -->
     <section class="news-section">
         <h2 class="section-title">Latest Updates</h2>
         <div class="news-update-card">
@@ -65,5 +69,16 @@
             </div>
         </div>
     </section>
+    <section id="weekly-updates">
+        <h2> Weekly Updates</h2>
+        <div
+            id="meeting-tracker">
+
+        </div>
+    </section>
+
+    <!-- Include the script at the end of the body -->
+    <script src="meetingTrack.js"></script>
+</body>
 
 </html>
