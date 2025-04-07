@@ -201,19 +201,29 @@ body {
 .meeting {
     border-left: 3px solid #2ecc71;
     padding-left: 15px;
-    margin: 20px 0;
+    margin: auto;
 }
 
 .meeting-date {
     font-weight: bold;
-    color: #a31515;
-    margin: 5px 0;
+    color: #000000;
+    margin: 10px 0;
 }
 
 .hidden {
     display: none;
 }
 
+ 
+.delete-deleteBtn {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 5px 0;
+}
 button {
     background-color: #2ecc71;
     color: white;
@@ -223,6 +233,7 @@ button {
     cursor: pointer;
     margin: 5px 0;
     font-size: 0.9em;
+    
 }
 
 button:hover {
@@ -230,20 +241,21 @@ button:hover {
 }
 
 #auth-section, #post-form {
-    background-color: #f8f9fa;
+    background-image: linear-gradient(to top left,  #861d1d, #d04e4e);
     padding: 15px;
     border-radius: 5px;
-    margin: 20px 0;
+    margin: auto;
 }
 
 input, textarea {
     width: 100%;
-    padding: 8px;
-    margin: 8px 0;
+    padding: 7px;
+    margin: 7px 0;
     border: 1px solid #ddd;
     border-radius: 4px;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
+    box-shadow: 5px 5px 2.5px  lightblue;
 }
 
 .error {
@@ -265,5 +277,5 @@ hr {
 }
 
 #all-meetings-container.expanded {
-    max-height: 1000px;
+    max-height:1000px;
 }

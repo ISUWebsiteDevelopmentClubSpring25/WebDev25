@@ -30,10 +30,10 @@ document.addEventListener('DOMContentLoaded', function() {
             <input type="date" id="meeting-date" required>
             
             <label for="meeting-title">Title:</label>
-            <input type="text" id="meeting-title" placeholder="Enter meeting title" required>
+            <input type="text" id="meeting-title" placeholder="Enter meeting title:" required>
             
             <label for="meeting-summary">Summary:</label>
-            <textarea id="meeting-summary" rows="5" placeholder="Enter meeting summary" required></textarea>
+            <textarea id="meeting-summary" rows="7" placeholder="Enter meeting summary..." required></textarea>
             
             <button type="submit">Post Summary</button>
         </form>
@@ -51,6 +51,13 @@ document.addEventListener('DOMContentLoaded', function() {
     seeMoreBtn.textContent = 'See More';
     meetingTracker.appendChild(seeMoreBtn);
     
+    //create "delete" button
+    const deleteBtn = document.createElement('deleteBtn');
+    deleteBtn.className = 'delete-btn';
+    deleteBtn.id = 'delete-btn';
+    deleteBtn.textContent = 'Delete Selected Meetings';
+    meetingTracker.appendChild(deleteBtn);
+
     // Create container for all meetings with smooth expand/collapse
     const allMeetingsContainer = document.createElement('div');
     allMeetingsContainer.id = 'all-meetings-container';
@@ -64,6 +71,9 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('auth-btn').addEventListener('click', authenticate);
     document.getElementById('meeting-form').addEventListener('submit', submitMeeting);
     document.getElementById('see-more-btn').addEventListener('click', toggleAllMeetings);
+    //delete selected meetings
+    document.getElementById('delete-btn').addEventListener('click', deleteMeeting);
+
     
     // Initialize display
     displayMeetings();
@@ -78,6 +88,24 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('auth-error').classList.remove('hidden');
         }
     }
+
+    function deleteMeeting() {
+        const selectedMeetings = document.querySelectorAll('.meeting-checkbox:checked');
+        if (selectedMeetings.length === 0) {
+            alert('No meetings selected for deletion.');
+            return;
+        }
+        
+        selectedMeetings.forEach(meeting => {
+            const meetingId = meeting.getAttribute('data-id');
+            meetings = meetings.filter(m => m.id != meetingId);
+        });
+        
+        localStorage.setItem('webDevClubMeetings', JSON.stringify(meetings));
+        displayMeetings();
+    }
+
+
     
     function submitMeeting(e) {
         e.preventDefault();
@@ -155,7 +183,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         
         meetingEl.innerHTML = `
-            <h3>${meeting.title}</h3>
+            <h4>${meeting.title}</h4>
             <p class="meeting-date">${formattedDate}</p>
             <p>${meeting.summary}</p>
             <hr>
