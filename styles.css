@@ -206,7 +206,7 @@ body {
 
 .meeting-date {
     font-weight: bold;
-    color: #7f8c8d;
+    color: #a31515;
     margin: 5px 0;
 }
 
@@ -254,7 +254,7 @@ input, textarea {
 hr {
     border: 0;
     height: 1px;
-    background-color: #ecf0f1;
+    background-color: #cfdfe3;
     margin: 15px 0;
 }
 
@@ -265,5 +265,5 @@ hr {
 }
 
 #all-meetings-container.expanded {
-    max-height: 2000px;
+    max-height: 1000px;
 }
