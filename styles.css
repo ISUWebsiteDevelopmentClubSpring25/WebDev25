@@ -164,10 +164,29 @@ body {
     color: black;
     margin: 0 auto;
     width: 70%;
+    font-size: larger;
     padding: 20px;
     border-radius: 10px;
-    font-weight: bold;
+    font-weight: none;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+          rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+          rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+          animation: appear linear;
+          animation-timeline: view();
+          animation-range: entry 0% cover 40%;
 }
+
+@keyframes appear{
+    from{
+        opacity: 0;
+        clip-path: inset(100% 100% 0 0);
+    }
+    to {
+        opacity: 1;
+        clip-path: inset(0 0 0 0);
+    }
+}
+
 
 .news-update-card {
     display: flex;
@@ -178,17 +197,35 @@ body {
     margin: 20px auto;
     border-radius: 10px;
     overflow: hidden;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+          rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+          rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+          animation: appear linear;
+          animation-timeline: view();
+          animation-range: entry 0% cover 40%;
 }
 
 .news-section {
     padding: 20px;
     text-align: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+          rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+          rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+          animation: appear linear;
+          animation-timeline: view();
+          animation-range: entry 0% cover 40%;
 }
 
 .news-body {
     margin: 0;
     font-family: Arial, sans-serif;
     background: linear-gradient(to bottom, #861d1d, #d04e4e);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+          rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+          rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+          animation: appear linear;
+          animation-timeline: view();
+          animation-range: entry 0% cover 40%;
 }
 
 .header-logos{
@@ -215,14 +252,19 @@ body {
 }
 
  
-.delete-deleteBtn {
-    background-color: #e74c3c;
+deleteBtn {
+    background-color: #ff00cc;
     color: white;
     border: none;
     padding: 8px 15px;
     border-radius: 4px;
     cursor: pointer;
     margin: 5px 0;
+
+}
+
+deleteBtn:hover {
+    background-color: #b3008f;
 }
 button {
     background-color: #2ecc71;
@@ -245,6 +287,12 @@ button:hover {
     padding: 15px;
     border-radius: 5px;
     margin: auto;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+          rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+          rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+          animation: appear linear;
+          animation-timeline: view();
+          animation-range: entry 0% cover 40%;
 }
 
 input, textarea {
@@ -255,7 +303,9 @@ input, textarea {
     border-radius: 4px;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
-    box-shadow: 5px 5px 2.5px  lightblue;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+          rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+          rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
 .error {
@@ -268,14 +318,29 @@ hr {
     height: 1px;
     background-color: #cfdfe3;
     margin: 15px 0;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+          rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+          rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+          animation: appear linear;
+          animation-timeline: view();
+          animation-range: entry 0% cover 40%;
 }
 
 #all-meetings-container {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.5s ease-out;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 20%;
+    
+      
 }
 
 #all-meetings-container.expanded {
-    max-height:1000px;
+    max-height:2000px;
+   
 }
