@@ -47,12 +47,6 @@ body {
 
   }
 
-  @media (max-width: 768px) {
-    .header-top {
-        flex-direction: column; /* Stack logo and text vertically on smaller screens */
-        text-align: center;
-    }
-}
 
 .topnav a:hover {
     background-color: #f1acac;
@@ -92,11 +86,33 @@ body {
     border-radius: 35px;
     z-index: 1000;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-}
+    opacity: 0;
+    visibility: hidden;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  .dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  @keyframes fadeIn { /*fade in animation for the dropdown menu*/
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 
 .dropdown-menu li {
     width: 100%;
-    padding: 10px 0;
+    padding: 10px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
 }
 
 .dropdown-menu a {
@@ -104,6 +120,8 @@ body {
     padding: 10px;
     display: block;
     text-decoration: none;
+    margin: 0 auto;
+    text-align: center; 
 }
 
 .dropdown-menu a:hover {
@@ -119,6 +137,21 @@ body {
     font-weight: 400;
     font-size: 45px;
     text-align: center;
+    padding-bottom: 20px;
+}
+
+.event{
+    font-family: "Jersey 25", sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+    list-style-type: circle;
+    margin: 0 0 15 0px;
+}
+.event-list{
+  margin: 0 auto;
+  margin-top: -10px;
+  margin-bottom: 30px;
+  padding: 0;
 }
 
 .upcoming-events{
@@ -129,6 +162,7 @@ body {
     text-align: center;
     margin: 25px 25px 25px;
     width: 250px;
+    color: white;
 }
 
 .about-card{
@@ -138,6 +172,7 @@ body {
     flex-wrap: wrap;
     align-items: center;
     width: 750px;
+    margin-left: 60px;
 }
 
 .about-description {
@@ -151,13 +186,6 @@ body {
     padding: 30px;
     
 }
-
-@media (max-width: 768px) {
-    .about-card {
-      flex-direction: column;
-      text-align: center;
-    }
-  }
 
 .featured-news-card {
     background-color: white;
@@ -235,24 +263,56 @@ body {
 .center-page {
     display: flex;
 }
-.meeting {
-    border-left: 3px solid #2ecc71;
-    padding-left: 15px;
-    margin: auto;
+
+.card-underline{ /*White line under "Upcoming events"*/
+    background-color: white;
+    height: 3.5px;
+    width: 85%;
+    margin-top: -42px;
+    display: inline-block;
 }
 
-.meeting-date {
-    font-weight: bold;
-    color: #000000;
-    margin: 10px 0;
+@media (max-width: 768px) {
+    .header-top {
+        flex-direction: column; /* Stack logo and text vertically on smaller screens */
+        text-align: center;
+    }
+    .about-card {
+        flex-direction: column;
+        text-align: center;
+      }
+    .header-logos{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+    .center-page{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media (min-width: 769px) and (max-width: 1087px){
+    .card-underline{ /* Visual adjustments for medium sized screens */
+        display: none;
+    }
+    .about-card{
+        flex-direction: column;
+    }
 }
 
-.hidden {
-    display: none;
+@media(max-width: 1080px){
+    .header-logos{
+        height: 2em;  
+        width: 2em;
+    }
 }
 
  
-deleteBtn {
+deleteBptn {
     background-color: #ff00cc;
     color: white;
     border: none;
@@ -344,3 +404,4 @@ hr {
     max-height:2000px;
    
 }
+  
