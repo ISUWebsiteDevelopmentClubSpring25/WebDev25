@@ -1,3 +1,5 @@
+ // cesar hernandez
+
 document.addEventListener('DOMContentLoaded', function() {
     // Current semester password (should be changed each semester)
     const currentPassword = "Spring2024";
@@ -45,25 +47,24 @@ document.addEventListener('DOMContentLoaded', function() {
     `;
     meetingTracker.appendChild(postForm);
 
-    // ======================
     // 3. RECENT MEETINGS (ALWAYS VISIBLE)
-    // ======================
+
     const recentMeetings = document.createElement('div');
     recentMeetings.id = 'recent-meetings';
     meetingTracker.appendChild(recentMeetings);
 
-    // ======================
+  
     // 4. "SEE MORE" BUTTON (HIDDEN BY DEFAULT)
-    // ======================
+    
     const seeMoreBtn = document.createElement('button');
     seeMoreBtn.id = 'see-more-btn';
     seeMoreBtn.textContent = 'See More';
     seeMoreBtn.style.display = 'none';
     meetingTracker.appendChild(seeMoreBtn);
 
-    // ======================
+  
     // 5. ALL MEETINGS CONTAINER (HIDDEN BY DEFAULT)
-    // ======================
+   
     const allMeetingsContainer = document.createElement('div');
     allMeetingsContainer.id = 'all-meetings-container';
     allMeetingsContainer.style.display = 'none'; // Initially hidden
@@ -73,18 +74,15 @@ document.addEventListener('DOMContentLoaded', function() {
     allMeetingsContainer.appendChild(allMeetings);
     meetingTracker.appendChild(allMeetingsContainer);
 
-    // ======================
     // EVENT LISTENERS
-    // ======================
+    
     document.getElementById('auth-btn').addEventListener('click', authenticate);
     seeMoreBtn.addEventListener('click', toggleAllMeetings);
 
     // Initialize meetings display
     displayMeetings();
 
-    // ======================
     // FUNCTIONS
-    // ======================
     function authenticate() {
         const passwordInput = document.getElementById('member-password').value;
         const errorEl = document.getElementById('auth-error');
