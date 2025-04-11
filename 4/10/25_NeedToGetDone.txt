@@ -1,0 +1,25 @@
+Needs to get done:
+    1. Homepage (Justin & Colton)
+        calandar api 
+        developer cards  
+        Footer api
+        meet the members (inspiration COD CS CLUB)
+
+
+    2. News (Cesar & Michael)
+        RSS Feed for featured news
+        debug weekly meeting summary
+        finish card containers
+        current project 
+
+
+Set up Firebase DB  
+    - Host
+    - Datbase 
+
+
+Create API componets 
+ - nav 
+ - footer 
+ - team
+        

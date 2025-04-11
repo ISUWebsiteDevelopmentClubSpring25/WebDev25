@@ -138,6 +138,7 @@ body {
     font-size: 45px;
     text-align: center;
     padding-bottom: 20px;
+    color: white;
 }
 
 .event{
@@ -173,11 +174,13 @@ body {
     align-items: center;
     width: 750px;
     margin-left: 60px;
+    margin-bottom: 60px;
 }
 
 .about-description {
     width: 500px;
     text-align: center;
+    color: white;
 }
 
 .card-images{
@@ -195,13 +198,37 @@ body {
     font-size: larger;
     padding: 20px;
     border-radius: 10px;
-    font-weight: none;
+    text-align: center;
+    font-weight: bold;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
           rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
           rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
           animation: appear linear;
           animation-timeline: view();
           animation-range: entry 0% cover 40%;
+}
+
+.why-join-card{
+    background-color: #FF6868;
+    border-radius: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 1000px;
+    margin-left: 60px;
+    margin-bottom: 60px;
+    padding: 25px;
+}
+
+.why-join-link{
+    color: white;
+    font-size: 28px;
+}
+
+.why-join-description {
+    width: 500px;
+    text-align: center;
+    color: white;
 }
 
 @keyframes appear{
@@ -220,17 +247,12 @@ body {
     display: flex;
     flex-direction: column;
     background-color: white;
-    color: black;
-    width: 250px;
-    margin: 20px auto;
-    border-radius: 10px;
+    border-radius: 8px;
+    width: 220px;
+    padding: 0;
     overflow: hidden;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-          rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
-          rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-          animation: appear linear;
-          animation-timeline: view();
-          animation-range: entry 0% cover 40%;
+    color: black;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .news-section {
@@ -267,10 +289,29 @@ body {
 .card-underline{ /*White line under "Upcoming events"*/
     background-color: white;
     height: 3.5px;
-    width: 85%;
+    width: 100%;
     margin-top: -42px;
     display: inline-block;
 }
+
+
+.header-button:hover{
+    opacity: 75%;
+}
+
+.footer-card{
+    background-color: #669BBC;
+    color: white;
+    font-size: 20px;
+    padding-left: 20px;
+    height: 100px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+
+
 
 @media (max-width: 768px) {
     .header-top {
@@ -398,4 +439,28 @@ hr {
     max-height:2000px;
    
 }
-  
+
+.update-image {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+}
+
+.featured-news-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+
+.latest-updates-container {
+    display: flex;
+    flex-direction: row; 
+    gap: 20px; 
+    flex-wrap: wrap; 
+    justify-content: flex-start; 
+}
+.update-date {
+    font-size: 12px;
+    color: gray;
+    margin: 0;
+}
