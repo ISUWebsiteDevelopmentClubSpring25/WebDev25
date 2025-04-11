@@ -17,24 +17,43 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+    flex-wrap: wrap;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.header-logos {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
 }
 
 .header-top {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    flex-wrap: wrap;
+    gap: 16px;
 }
 
 .header-labels {
     font-size: 72px;
+    user-select: none;
 }
 
 .topnav {
+
     background-color: none;
     overflow: visible;
     font-weight: 400;
     font-style: normal;
+    
+    
 }
 
 .topnav a {
@@ -44,7 +63,9 @@ body {
     padding: 14px 50px;
     text-decoration: none;
     font-size: 27px;
-
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
 
@@ -77,12 +98,13 @@ body {
     display: none;
     position: absolute;
     top: 100%;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     background: #f1acac;
     list-style: none;
     padding: 0;
     margin: 0;
-    width: 175px;
+    width: 150px;
     border-radius: 35px;
     z-index: 1000;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
@@ -125,7 +147,8 @@ body {
 }
 
 .dropdown-menu a:hover {
-    background: red;
+    color: red;
+    transition: all 0.8s ease;
 }
 
 .dropdown:hover .dropdown-menu {
@@ -172,7 +195,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    width: 750px;
+    width: 120vh;
     margin-left: 60px;
     margin-bottom: 60px;
 }
@@ -279,7 +302,10 @@ body {
 }
 
 .header-logos{
-    padding-left: 25px;
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin-top: 8px;
 }
 
 .center-page {
@@ -297,6 +323,8 @@ body {
 
 .header-button:hover{
     opacity: 75%;
+    transition: all 0.3s ease;
+    transform: scale(1.05);
 }
 
 .footer-card{
@@ -310,13 +338,11 @@ body {
     align-items: center;
 }
 
-
-
-
 @media (max-width: 768px) {
     .header-top {
         flex-direction: column; /* Stack logo and text vertically on smaller screens */
         text-align: center;
+        align-items: center;
     }
     .about-card {
         flex-direction: column;
@@ -328,6 +354,11 @@ body {
         justify-content: center;
         align-items: center;
         gap: 10px;
+        order: 2;
+    }
+    .header-content {
+        flex-direction: column;
+        align-items: center;
     }
     .center-page{
         display: flex;
