@@ -72,7 +72,7 @@ body {
 .topnav a:hover {
     background-color: #f1acac;
     color: none;
-    transition: background 0.4s ease-in-out;
+    transition: background 0.3s ease-in-out;
     border-radius: 35px;
 }
 
@@ -116,7 +116,7 @@ body {
   .dropdown:hover .dropdown-menu {
     opacity: 1;
     visibility: visible;
-    animation: fadeIn 0.5s ease-in-out;
+    animation: fadeIn 0.3s ease-in-out;
   }
   
   @keyframes fadeIn { /*fade in animation for the dropdown menu*/
@@ -148,7 +148,7 @@ body {
 
 .dropdown-menu a:hover {
     color: red;
-    transition: all 0.8s ease;
+    transition: all 0.6s ease;
 }
 
 .dropdown:hover .dropdown-menu {
@@ -171,12 +171,16 @@ body {
     list-style-type: disc;
     margin: 0 0 10 0px;
     margin-left: 1rem;
+    display: block;
 }
 .event-list{
   margin: 0 auto;
   margin-top: -10px;
   margin-bottom: 30px;
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 260px; /* Set a max width for the list to prevent overflow on card */
 }
 
 .upcoming-events{
@@ -195,10 +199,11 @@ body {
 .upcoming-events-header {
     color: white;
     font-size: 2.5rem;
+    font-weight: 100;
     margin-bottom: 4rem;
     align-items: center;
     text-align: center;
-    margin-left: 1.5rem;
+    /* margin-left: 1.5rem; */
 }
 
 .calendar-container {
@@ -235,6 +240,7 @@ body {
     color: white;
     font-size: 2.5rem;
     margin-bottom: 1rem;
+    font-weight: 100;
 }
 
 .about-description {
@@ -320,6 +326,16 @@ body {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
+.bullet{
+    background-color: white;
+    border-radius: 200%;
+    height: 5px;   
+    width: 5px;
+    margin-right: 1rem;
+    margin-left: -1rem;
+    display: inline-block;
+    border: white solid 2px;
+}
 .news-section {
     padding: 20px;
     text-align: center;
